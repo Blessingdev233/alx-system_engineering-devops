@@ -1,11 +1,8 @@
-<head>
-  <style>
-  h1 {color:red;}
-</style> 
-  <h1>Shell I/O Redirections</h1>
+
+<h1>Shell I/O Redirections</h1>
 
 <h2>Command Scripts for Shell Redirections.</h2>
-</head> 
+
 <section>
 0. Print Hello, World
 <hr>
