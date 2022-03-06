@@ -1,6 +1,6 @@
 <head>
   <style>
-  hr {color:red;}
+  h1 {color:red;}
 </style> 
   <h1>Shell I/O Redirections</h1>
 
