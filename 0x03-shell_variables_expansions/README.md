@@ -9,5 +9,11 @@
 <hr>
 1. 1-hello_you - Printing hello 'User', where 'User' is current linux user (echo "hello $USER")
 <hr>
-2. 2-path - (PATH=$PATH:/action) 
+2. 2-path - (PATH=$PATH:/action)
+<hr>
+3. 3-paths - (echo $PATH | tr ":" "\n" | wc -l)
+<hr>
+4. 4-global_variables - listing environment variables (printenv)
+<hr>
+5. 5-local_variables - listing all local and environment variables (set) 
 </section>
