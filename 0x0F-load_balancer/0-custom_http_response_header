@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 # Installs, configures, and starts the web server
-apt-get update
-apt-get -y install nginx
-ufw allow 'Nginx HTTP'
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
 mkdir -p /var/www/html /var/www/error
 chmod -R 755 /var/www
-echo 'Hello World!' > /var/www/html/index.html
-echo -e "Ceci n'est pas une page" > /var/www/error/404.html
+sudo echo 'Hello World!' > /var/www/html/index.html
+sudo echo -e "Ceci n'est pas une page" > /var/www/error/404.html
 # the server's configuration
 SERVER_CONFIG=\
 "server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 	root /var/www/html;
-	index index.html index.htm index.nginx-debian.html;
+	index index.html index.html index.nginx-debian.html;
 	server_name _;
 	location / {
 		try_files \$uri \$uri/ =404;
@@ -31,7 +31,7 @@ SERVER_CONFIG=\
 }"
 bash -c "echo -e '$SERVER_CONFIG' > /etc/nginx/sites-enabled/default"
 if [ "$(pgrep -c nginx)" -le 0 ]; then
-	service nginx start
+	sudo service nginx start
 else
-	service nginx restart
+	sudo service nginx restart
 fi
