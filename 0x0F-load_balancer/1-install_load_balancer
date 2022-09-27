@@ -15,11 +15,9 @@ backend $DOMAIN_NAME-backend
 	balance roundrobin
 	server web1 35.170.77.32 check
 	server web2 34.232.63.200 check
-
 frontend $DOMAIN_NAME-frontend
 	bind *:80
 	mode http
-
 	default_backend $DOMAIN_NAME-backend
 #--$DOMAIN_NAME-params-end--
 "
